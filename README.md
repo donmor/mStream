@@ -73,6 +73,16 @@ mStream has three installation methods:
 * [Install From Source](docs/install.md)
 * [AWS Cloud using Terraform](https://gitlab.com/SiliconTao-Systems/nova)
 
+### Docker Compose recipes
+
+Drop-in `compose.yml` recipes for common deployments — see the [cookbook README](docs/docker-compose/) for the full index and per-recipe notes.
+
+* [**default/**](docs/docker-compose/default/) — streaming-only, single linuxserver/mstream container
+* [**with-mpd/**](docs/docker-compose/with-mpd/) — adds server-side audio playback via a sidecar MPD container
+* [**ssl-nginx/**](docs/docker-compose/ssl-nginx/) — mStream behind nginx with a Let's Encrypt wildcard cert (acme.sh + Cloudflare DNS-01)
+* [**dev/**](docs/docker-compose/dev/) — runs mStream from this repo's source with `node --watch` for hot reload
+* [**dev-everything/**](docs/docker-compose/dev-everything/) — `dev/` with DLNA, Subsonic, rust-server-audio, and ALSA passthrough preconfigured
+
 ## Mobile Apps
 
 [<img src="/webapp/assets/img/app-store-logo.png" alt="mStream iOS App" width="200" />](https://apps.apple.com/us/app/mstream-player/id1605378892)
